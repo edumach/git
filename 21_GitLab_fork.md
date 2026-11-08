@@ -19,9 +19,10 @@ Další podmínkou forku je **viditelnost projektu**. V našem školním prostř
 
 **Shrnutí:**
 
-- klon = lokální kopie bez práv zápisu
 - fork = vlastní vzdálená kopie po vaším účtem
+- klon = lokální kopie bez práv zápisu
 
+![img/fork.png](img/fork.png)
 
 ## Fork projektu
 
