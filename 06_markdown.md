@@ -5,6 +5,8 @@
 
 Markdown je jednoduchý značkovací jazyk pro formátování prostého textu. V Gitu se používá hlavně v souboru `README.md`, který slouží jako dokumentace projektu. Na GitLabu či GitHubu se automaticky zobrazuje na hlavní stránce repozitáře. Umožňuje snadno vytvářet nadpisy, seznamy, odkazy, tabulky nebo části kódů. 
 
+Přípona markdown souboru je `.md`.
+
 Ukázka:
 
 ```md

@@ -1,6 +1,12 @@
 
 # Založení repozitáře
 
+```
+git init
+```
+
+---
+
 ⚠️ "repozitář" = "projekt" = "adresář" (složka)
 
 Nový projekt:
@@ -20,6 +26,8 @@ echo "# Můj projekt" > README.md
 git add README.md
 git commit -m "První commit"
 ```
+
+---
 
 ## Odstranění repozitáře
 

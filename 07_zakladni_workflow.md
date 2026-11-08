@@ -1,6 +1,15 @@
 
 # Základní workflow
 
+```
+git status
+git add
+git commit
+git log
+```
+
+---
+
 Všchny činnosti se provádějí **vždy v adresáři s repozitářem**!!!
 
 ```bash
