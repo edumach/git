@@ -52,6 +52,4 @@ Díky tomu vás bude práce se systémem Git bavit. Budete pracovat s vědomím,
 
 ---
 
-Tento text a další věci najdete ve zdarma dostupné knize **Pro Git** autora Scotta Chacona (2010)
-[https://www.root.cz/knihy/pro-git/](https://www.root.cz/knihy/pro-git/)
-
+I samotný Git vývojáři [verzují pomocí Gitu](https://git.kernel.org/pub/scm/git/git.git/).
