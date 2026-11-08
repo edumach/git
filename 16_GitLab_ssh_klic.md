@@ -1,14 +1,18 @@
 
 # Propojení s počítačem (SSH klíče)
 
-Vygenerování klíče:
-
-```bash
-ssh-keygen -t ed25519 -C "10XPrijmeniJ@student.panska.cz"
-```
+Pro plnohodnotnou spolupráci mezi lokálním Git repozitářem a GitLab serverem je potřeba si nejprve vygenerovat šifrovací klíče.
 
 ⚠️ Pro správnou funkčnost **musí být e-mail lokálního Git repozitáře stejný s GitLabem** - tedy váš školní. Před pokračováním zkontrolujte, popř. nastavte školní. Jinak nebude propojení na GitLab fungovat! Tento požadavek platí i pro GitHub.
 
+Na počítači si vygenerujte **pár šifrovacích klíčů** (dva textové soubory). Jeden je **privátní** - zůstává uložený v počítači, druhý je **veřejný**. Ten se nakopíruje na server. GitLab podporuje [několik typů klíčů](https://docs.gitlab.com/18.6/user/ssh/). My použijeme preferovaný typ **ED25519**. Používá jej i GitHub.
+
+Vygenerování klíče:
+
+```bash
+$ ssh-keygen -t ed25519 -C "10XPrijmeniJ@student.panska.cz"
+```
+Všechny otázky potvrďte klávesou **Enter**, heslo ke klíči nevytvářejte.
 
 Výchozí umístění:
 
@@ -56,7 +60,7 @@ Welcome to GitLab, @10XPrijmeniJ!
 
 ---
 
-🔐 ssh klíč typu `ed25519` používá i GitHub. Stejný veřejný klíč (`id_ed25519.pub`) můžete použít i tam. Nemusíte generovat nový.
+🔐 ssh klíč typu `ed25519` používá i GitHub. Stejný veřejný klíč (`id_ed25519.pub`) můžete použít i tam.
 
 ---
 
