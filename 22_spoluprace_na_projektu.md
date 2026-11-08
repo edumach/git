@@ -32,7 +32,7 @@ Role (od nejnižších oprávnění):
 
 Termín merge request pochází z prostředí GitLab a označuje situaci, kdy autor změn požádá správce originálního repozitáře, aby vzal jeho změny a začlenil je do hlavní větve projektu. Na platformě GitHub se pro totéž používá výraz pull request.
 
-Git jako takový žádný příkaz merge request nebo pull request nezná - jde o funkce, které poskytuje webová nadstavba repozitářů (GitLab a GitHub).
+Git jako takový žádný příkaz "merge request" nebo "pull request" nezná - jde o funkce, které poskytuje webová nadstavba repozitářů (GitLab a GitHub).
 
 Zjednodušeně:
 - Merge request je v prostředí GitLabu varianta pull requestu.
