@@ -84,5 +84,7 @@ nastaví, že při použití `git pull` bude Git změny ze serveru začleňovat 
 
 Toto nastavení je vhodné zejména pro začátečníky, protože je bezpečnější a předvídatelnější a nevyžaduje řešit složitější situace vznikající při použití `rebase`.
 
+## Práce na dvou počítačích
 
+![Dva počítače](img/dva-pocitace.png)
 
