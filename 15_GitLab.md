@@ -19,15 +19,10 @@ Pro výukové účely ve škole používáme vlastní server s platformou **GitL
 
 ⚠️ ==**Neplést s komerčním `GitLab.com`**==
 
-Poznámky: 
-
-- Nezaměňovat s `gitlab.com`! To je komerční verze stejně jako GitHub.
-- Pro práci se školním GitLabem není potřeba instalovat GitLab. Stačí mít nainstalovaný Git a vytvořený účet na `gitlab.panska.cz`.
-
 
 ## Vytvoření účtu
 
-<img src="img/gitlab-register.png" width="400">
+<img src="img/gitlab-register.png" width="600">
 
 
 1. Otevřít: [https://gitlab.panska.cz](https://gitlab.panska.cz)
@@ -35,7 +30,7 @@ Poznámky:
 3. Vyplnit:
 
    - jméno a příjmení,
-   - uživatelské jméno **ve tvaru** `10XPrijmeniJ` (v rámci systému musí být unikátní)
+   - uživatelské jméno **ve tvaru** `10XPrijmeniJ` (==v rámci systému musí být unikátní==)
    - **školní e-mail** `10XPrijmeniJ@student.panska.cz` (jiný než školní nebude fungovat)
    - vhodné heslo, klidně vaše školní.
 
