@@ -15,7 +15,9 @@ Umožňuje:
 
 Pro výukové účely ve škole používáme vlastní server s platformou **GitLab Community Edition** (GitLab CE), který nám poskytuje plnou kontrolu nad projekty i uživatelskými účty a **umožňuje bezpečnou práci v interním školním prostředí**.
 
-🌐 Školní instance: **[https://gitlab.panska.cz](https://gitlab.panska.cz)**
+🌐 Školní instance: **[https://gitlab.panska.cz](https://gitlab.panska.cz)** 
+
+⚠️ ==**Neplést s komerčním `GitLab.com`**==
 
 Poznámky: 
 
