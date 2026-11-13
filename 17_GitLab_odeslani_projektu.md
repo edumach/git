@@ -88,3 +88,63 @@ Tím dojde pouze ke změně cílového vzdáleného repozitáře. Veškerá hist
 
 > **Poznámka:** Git umožňuje pracovat i s více vzdálenými repozitáři současně (např. GitHub a GitLab paralelně). V běžné školní praxi však vystačíme s jedním vzdáleným repozitářem, který je obvykle pojmenován `origin`.
 
+
+---
+
+# ⚠️ Rozdíl při prvním odeslání repozitáře na GitHub
+
+Při odesílání lokálního repozitáře na GitHub je postup téměř stejný jako u školního GitLabu. **Hlavní rozdíl je v tom, že na GitHubu musíte vzdálený repozitář nejprve vytvořit prostřednictvím webového rozhraní.**
+
+Samotný příkaz `git push` nový repozitář na GitHubu nevytvoří.
+
+## Postup
+
+**(1) Vytvoření vzdáleného repozitáře**
+
+1. Přihlaste se na [GitHub](https://github.com/).
+2. Klikněte na tlačítko **New repository**.
+3. Zadejte název repozitáře (např. `test`).
+4. Zvolte viditelnost repozitáře (Public nebo Private).
+5. Klikněte na **Create repository**.
+
+**Důležité:** Pokud již máte vlastní lokální repozitář, při vytváření nového vzdáleného repozitáře nezaškrtávejte vytvoření README, `.gitignore` ani licence. Obsah repozitáře odešlete ze svého počítače.
+
+**(2) Připojení lokálního repozitáře ke GitHubu**
+
+Adresa vzdáleného repozitáře má následující podobu:
+
+```bash
+$ git remote add origin git@github.com:Username/test.git
+```
+
+Místo `Username` použijte své uživatelské jméno na GitHubu.
+
+**(3) Kontrola propojení**
+
+```bash
+$ git remote -v
+```
+
+**(4) První odeslání**
+
+```bash
+$ git push -u origin main
+```
+
+Parametr `-u` nastaví výchozí vzdálenou větev. Při dalších odesíláních již stačí použít:
+
+```bash
+$ git push
+```
+
+## Shrnutí rozdílu mezi GitLabem a GitHubem
+
+| Operace | Školní GitLab | GitHub |
+|---|---|---|
+| Vytvoření vzdáleného repozitáře | Může vzniknout automaticky při prvním `push` | Nejprve ručně přes web |
+| Připojení pomocí `git remote add` | Ano | Ano |
+| První odeslání `git push -u` | Ano | Ano |
+| Další odesílání `git push` | Ano | Ano |
+
+**Zapamatujte si:** U našeho školního GitLabu lze vytvořit vzdálený projekt prvním odesláním. GitHub vyžaduje, abyste vzdálený repozitář nejprve založili.
+
