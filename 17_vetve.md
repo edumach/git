@@ -44,14 +44,14 @@ S Gitem:
 - Sloučíte větev nového designu s hlavní (v commitu upozorníte na malou opravu chyby, kterou jste přehlédli).
 
 
-==Větve vám umožní pracovat na různých částech projektu, aniž byste ovlivnili hlavní větev.==
+**Větve vám umožní pracovat na různých částech projektu, aniž byste ovlivnili hlavní větev.**
 
 
 
 Výpis větví:
 
 ```bash
-git branch
+$ git branch
 ```
 
 Aktivní větev má před názvem `*`. Výchozí a zatím jedinou větví je `main` (nebo `master`).
@@ -60,47 +60,50 @@ Aktivní větev má před názvem `*`. Výchozí a zatím jedinou větví je `ma
 Vytvoření větve:
 
 ```bash
-git branch nova-funkce
+$ git branch nova-funkce
 ```
 
 Přepnutí do větve:
 
 ```bash
-git checkout nova-funkce
+$ git checkout nova-funkce
 ```
 
 Vytvoření a okamžité přepnutí:
 
 ```bash
-git checkout -b nova-funkce
+$ git checkout -b nova-funkce
 ```
 
 ## Sloučení větví
 
 ⚠️ Pravidlo: Vždy se slučuje jiná větev do aktivní. V příkladu níže **z** větve `nova-funkce` **do** větve `main`.
 
+<img src="img/merge.png" width="500">
+
+
 Nejprve přepnutí:
 
 ```bash
-git checkout main
+$ git checkout main
 ```
 
 Poté sloučení:
 
 ```bash
-git merge nova-funkce
+$ git merge nova-funkce
 ```
 
 Smazání větve:
 
 ```bash
-git branch -d nova-funkce
+$ git branch -d nova-funkce
 ```
 
 Log včetně grafu větví:
 
 ```bash
-git log --oneline --graph --all
+$ git log --oneline --graph --all
 ```
 
 Ukáže vývoj větví a jejich spojování.
@@ -109,23 +112,17 @@ Ukáže vývoj větví a jejich spojování.
 
 Příkaz `git merge` může skončit jedním z těchto stavů:
 
-### Fast forward
+1. **Fast forward** - Změny byly provedeny pouze ve vedlejší větvi. Sloučením se pouze posune ukazatel `HEAD` podle nejnovějšího commitu.
 
-Změny byly provedeny pouze ve vedlejší větvi. Spučením se pouze posune ukazatel `HEAD` podle nejnovějšího commitu.
+2. **True merge** - Změny byly provedeny jak v hlavní, tak vedlejší větvi. Sloučení je spojí - zahrne změny z obou větví.
 
-### True merge
-
-Změny byly provedeny jak v hlavní, tak vedlejší větvi. Sloučení je spojí - zahrne změny z obou větví.
-
-### Aborted merge
-
-Změny byly provedeny jak v hlavní, tak vedlejší větvi. Sloučení ovšem selže, neboť minimálně jedna změna se týká **stejného řádku kódu souboru jak v hlavní, tak vedlejší větvi**. Git nemůže rozhodnout, kterou z těch změn má zachovat a kterou zahodit. Tím vznikne tzv. "konflikt". Příklad:
+3. **Aborted merge** - Změny byly provedeny jak v hlavní, tak vedlejší větvi. Sloučení ovšem selže, neboť minimálně jedna změna se týká **stejného řádku kódu souboru jak v hlavní, tak vedlejší větvi**. Git nemůže rozhodnout, kterou z těch změn má zachovat a kterou zahodit. Tím vznikne tzv. "konflikt". Příklad:
 
 Mějme soubor se styly `styly.css` ve větvi `main` s tímto obsahem:
 
 ```css
 h1 {
-  font-family: arial;
+  font-family: Arial;
   color: navy;
 }
 ```
@@ -134,12 +131,12 @@ V nové větvi `novy-vzhled` upravíme soubor takto:
 
 ```css
 h1 {
-  font-family: arial;
+  font-family: Arial;
   color: yellow;
 }
 ```
 
-Pokus o merge skončí konfliktem:
+Pokus o merge skončí **konfliktem**:
 
 ```
 $ git merge novy-vzhled
@@ -150,7 +147,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 Výpis příkazem `git diff` zjistíme, kde je chyba:
 
-```
+```bash
 $ git diff
 diff --cc styly.css
 index 241cc8b,18d8f2f..0000000
@@ -199,7 +196,7 @@ $ git commit -m "komentář"
 
 `git log` pak může vypadat např. takto:
 
-```
+```bash
 $ git log --oneline --graph
 *   158e504 (HEAD -> main) oprava barvy nadpisu
 |\  
@@ -210,4 +207,4 @@ $ git log --oneline --graph
 * 4f6f79f výchozí vzhled
 ```
 
-Konflikt není chyba. Git pouze potřebuje, aby uživatel rozhodl, která verze obsahu má být zachována.
+**Konflikt není chyba**. Git pouze potřebuje, aby uživatel rozhodl, která verze obsahu má být zachována.
