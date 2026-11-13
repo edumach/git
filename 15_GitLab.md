@@ -17,7 +17,7 @@ Pro výukové účely ve škole používáme vlastní server s platformou **GitL
 
 🌐 Školní instance: **[https://gitlab.panska.cz](https://gitlab.panska.cz)** 
 
-⚠️ ==**Neplést s komerčním `GitLab.com`**==
+⚠️ **Neplést s komerčním `GitLab.com`**
 
 
 ## Vytvoření účtu
@@ -30,7 +30,7 @@ Pro výukové účely ve škole používáme vlastní server s platformou **GitL
 3. Vyplnit:
 
    - jméno a příjmení,
-   - uživatelské jméno **ve tvaru** `10XPrijmeniJ` (==v rámci systému musí být unikátní==)
+   - uživatelské jméno **ve tvaru** `10XPrijmeniJ` (v rámci systému musí být unikátní)
    - **školní e-mail** `10XPrijmeniJ@student.panska.cz` (jiný než školní nebude fungovat)
    - vhodné heslo, klidně vaše školní.
 
