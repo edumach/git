@@ -171,6 +171,7 @@ ssh -T $ git@gitlab.panska.cz
 Před zahájením práce:
 
 ```bash
+$ git fetch
 $ git pull
 ```
 
