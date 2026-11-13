@@ -30,9 +30,17 @@ Stáhnout a nainstalovat [https://git-scm.com/download/win](https://git-scm.com/
 
 ## macOS
 
+
 ```bash
 % xcode-select --install
 ```
 
 Případně stáhnout z [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
+
+Příoadně, pokud používáte `brew`, nainstalovat jej pomocí něho:
+
+```bash
+% brew install git
+```
+
 

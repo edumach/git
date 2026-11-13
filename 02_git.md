@@ -2,54 +2,132 @@
 
 <img src="img/git-logo.png" width="100">
 
-## Stručná historie
+## Co je Git?
 
-Tak jako mnoho velkých věcí v lidské historii se i systém Git zrodil z kreativní destrukce a vášnivého sporu. Jádro Linuxu je software s otevřeným kódem a širokou škálou využití. V letech 1991 – 2002 bylo jádro Linuxu spravováno formou záplat a archivních souborů. V roce 2002 začal projekt vývoje linuxového jádra využívat komerční systém DVCS s názvem **Bit-Keeper**.
+Git je **distribuovaný** verzovací systém.
 
-V roce 2005 se zhoršily vztahy mezi komunitou, která vyvíjela jádro Linuxu, a komerční společností, která vyvinula BitKeeper, a společnost přestala tento systém poskytovat zdarma. To přimělo komunitu vývojářů Linuxu (a zejména Linuse Torvaldse, tvůrce Linuxu), aby vyvinula vlastní nástroj, založený na poznatcích, které nasbírala při užívání systému BitKeeper. 
+Umožňuje ukládat historii změn v projektu a kdykoliv se vrátit k dřívější verzi souborů.
 
-Mezi požadované vlastnosti systému patřily zejména:
+Nejčastěji se používá při vývoji softwaru, ale lze jej využít téměř pro jakýkoliv projekt obsahující soubory:
 
-- rychlost;
-- jednoduchý design;
-- silná podpora nelineárního vývoje (tisíce paralelních větví);
-- plná distribuovatelnost;
-- schopnost efektivně spravovat velké projekty, jako je linuxové jádro (rychlost a objem dat).
+- webové stránky,
+- dokumentaci,
+- školní práce,
+- prezentace,
+- technické projekty,
+- skripty,
+- konfigurační soubory.
 
-Od svého vzniku v roce 2005 se Git vyvinul a vyzrál v snadno použitelný systém, který si dodnes uchovává své prvotní kvality. Je extrémně rychlý, velmi efektivně pracuje i s velkými projekty a nabízí skvělý systém větvení pro nelineární způsob vývoje.
-
-Hlavním rozdílem mezi systémem Git a všemi ostatními systémy VCS (včetně Subversion a jemu podobných) je způsob, jakým Git zpracovává data. Většina ostatních systémů ukládá informace jako seznamy změn jednotlivých souborů. Tyto systémy (CVS, Perforce, Bazaar atd.) chápou uložené informace jako sadu souborů a seznamů změn těchto souborů v čase.
-
-Git zpracovává data jinak. Chápe je spíše jako sadu snímků (snapshots) vlastního malého systému souborů. Pokaždé, když v systému zapíšete (uložíte) stav projektu, Git v podstatě „vyfotí“, jak vypadají všechny vaše soubory v daném okamžiku, a uloží reference na tento snímek. Pokud v souborech nebyly provedeny žádné změny, Git v zájmu zefektivnění práce neukládá znovu celý soubor, ale pouze odkaz na předchozí identický soubor, který už byl uložen.
-
-## Téměř každá operace je lokální
-
-Většina operací v systému Git vyžaduje ke své činnosti pouze lokální soubory a zdroje a nejsou potřeba informace z jiných počítačů v síti. Celou historii projektu máte uloženou přímo na svém lokálním disku.
-
-Pokud chcete například procházet historii projektu, Git kvůli tomu nemusí vyhledávat informace na serveru – načte ji jednoduše přímo z vaší lokální databáze. Znamená to, že se historie projektu zobrazí téměř neprodleně. Pokud si chcete prohlédnout změny provedené mezi aktuální verzí souboru a týmž souborem před měsícem, Git vyhledá měsíc starý soubor a provede lokální výpočet rozdílů, aniž by o to musel žádat vzdálený server nebo stahovat starší verzi souboru ze vzdáleného serveru a poté provádět lokální výpočet.
-
-To také znamená, že je jen velmi málo operací, které nemůžete provádět offline nebo bez připojení k síti. Jste-li v letadle nebo ve vlaku a chcete pokračovat v práci, můžete beze všeho zapisovat nové revize. Ty se načtou ve chvíli, kdy se opět připojíte k síti. Jestliže přijedete domů a zjistíte, že připojení k síti nefunguje, stále můžete pracovat. V mnoha jiných systémech je takový postup nemožný nebo přinejmenším obtížný. 
-
-> Například v systému Perforce toho lze bez připojení k serveru dělat jen velmi málo, v systémech Subversion a CVS můžete sice upravovat soubory, ale nemůžete zapisovat změny do databáze, neboť ta je offline. Možná to vypadá jako maličkost, ale divili byste se, jaký je to velký rozdíl.
-
-## Git pracuje důsledně
-
-Než je v systému Git cokoli uloženo, je nejprve proveden kontrolní součet, který je potom používán k identifikaci dané operace. Znamená to, že není možné změnit obsah jakéhokoli souboru nebo adresáře, aniž by o tom Git nevěděl. Tato funkce je integrována do systému Git na nejnižších úrovních a je v souladu s jeho filozofií. Nemůže tak dojít ke ztrátě informací při přenostu dat nebo k poškození souboru, aniž byto byl Git schopen zjistit.
-
-Mechanismus, který Git k tomuto kontrolnímu součtu používá, se nazývá otisk SHA-1 (SHA-1 hash). Jedná se o řetězec o 40 hexadecimálních znacích (0–9; a–f) vypočítaný na základě obsahu souboru nebo adresářové struktury systému Git. Otisk SHA-1 může vypadat například takto:
+Díky Gitu už není potřeba vytvářet složky nebo soubory typu:
 
 ```
-24b9da6552252987aa493b52f8696cd6d3b00373
+projekt
+projekt-final
+projekt-final-oprava
+projekt-final-oprava-opravdu-final
 ```
 
-S těmito otisky se budete setkávat ve všech úložištích systému Git, protože je používá opravdu často. Neukládá totiž soubory podle jejich názvu, ale ve své databázi podle otisku (hashe) jeho obsahu.
+Veškerou historii uchovává Git.
 
-## Git většinou jen přidává data
+## Proč Git používat?
 
-Jednotlivé operace ve většině případů jednoduše přidávají data do Git databáze. Přimět systém, aby udělal něco, co nelze vzít zpět, nebo aby smazal jakákoli data, je velice obtížné. Stejně jako ve všech systémech VCS můžete ztratit nebo nevratně zničit změny, které ještě nebyly zapsány. Jakmile však jednou zapíšete snímek do systému Git, je téměř nemožné ho ztratit, zvlášť pokud pravidelně zálohujete databázi do jiného repozitáře.
+Git umožňuje:
 
-Díky tomu vás bude práce se systémem Git bavit. Budete pracovat s vědomím, že můžete experimentovat, a neriskujete přitom nevratné zničení své práce.
+- ukládat jednotlivé verze projektu,
+- vracet se ke starším verzím,
+- porovnávat provedené změny,
+- experimentovat bez rizika ztráty práce,
+- spolupracovat s dalšími lidmi.
+
+Při větších projektech se Git velmi rychle stane nepostradatelným nástrojem. Mnoho vývojářů po několika týdnech práce s Gitem říká:
+
+> „Jak jsem bez Gitu mohl vůbec fungovat?“
+
+## Jak Git funguje?
+
+Git si lze představit jako časovou osu projektu. Každé významnější změně vytvoříte tzv. "commit" (snímek projektu).
+
+```
+A ──> B ──> C ──> D ──> E ...
+```
+
+Pokud zjistíte, že jste něco pokazili, můžete se vrátit například ke stavu `B` nebo `C`.
+
+Na rozdíl od běžného kopírování složek:
+
+```
+projekt-v.1
+projekt-v.2
+projekt-v.3
+projekt-v.4
+```
+
+má Git historii přehledně na jednom místě.
+
+## Lokální práce
+
+Jednou z největších výhod Gitu je, že většinu operací provádí přímo na vašem počítači. Můžete:
+
+- vytvářet commity,
+- prohlížet historii,
+- přepínat mezi verzemi,
+
+i bez připojení k internetu.
+
+Server je potřeba až ve chvíli, kdy chcete projekt sdílet nebo zálohovat online.
+
+## Git není GitLab
+
+<img src="img/git-gitlab.png" width="500">
+
+Je důležité rozlišovat:
+
+| Nástroj | Účel |
+| --- | --- |
+| Git | verzování souborů |
+| GitLab / GitHub | ukládání a sdílení Git projektů |
+
+
+Git umí fungovat úplně bez GitLabu a GitHubu. GitLab a GitHub pouze umožňují projekty sdílet, zálohovat a spravovat online.
 
 ---
 
-I samotný Git vývojáři [verzují pomocí Gitu](https://git.kernel.org/pub/scm/git/git.git/).
+
+## Shrnutí
+
+Git:
+
+- ukládá historii projektu,
+- umožňuje bezpečný návrat ke starším verzím,
+- pomáhá při spolupráci (GitLab / GitHub),
+- funguje i bez internetu,
+- není určen pouze pro programátory.
+
+Git je univerzální nástroj pro správu rozsáhlejších projektů a jejich historie.
+
+## Zajímavosti
+
+### Jak vznikl Git
+
+Od roku 1992 vyvíjeli programátoři operační systém Linux. Pro správu zdrojových kódů používali jiný verzovací systém, ale ten přestal být pro jejich potřeby dostupný. Tvůrce Linuxu, *Linus Torvalds*, se proto v roce 2005 rozhodl vytvořit **[vlastní nástroj](https://git.kernel.org/pub/scm/git/git.git/)**. Jeho cílem bylo navrhnout systém, který bude:
+
+- rychlý,
+- spolehlivý,
+- schopný pracovat s velmi rozsáhlými projekty,
+- vhodný pro spolupráci velkého množství vývojářů.
+
+Během několika týdnů tak vznikl Git, který se postupně stal **nejpoužívanějším verzovacím systémem na světě**. Dnes jej používají jednotlivci, školy i firmy všech velikostí.
+
+Git vznikl původně pro **[vývoj Linuxu](https://github.com/torvalds/linux)**, ale dnes se používá při správě téměř jakéhokoliv projektu obsahujícího soubory. Může pomoci při tvorbě webových stránek, maturitních prací, technické dokumentace, školních projektů, poznámek v Markdownu, prezentací nebo například při vývoji her a jejich modifikací.
+
+
+### Proč se jmenuje Git?
+
+Když *Linus Torvalds* vytvářel Git, nebyl název myšlen úplně vážně. Slovo "git" je v britské angličtině mírně hanlivý výraz pro nepříjemného, hloupého nebo otravného člověka. Něco jako "trouba", "blbec" nebo "idiot". Sám Linus k tomu s typickým humorem uvedl něco ve smyslu:
+
+*"Git znamená nepříjemný člověk. Jsem sobec a všechny své projekty pojmenovávám po sobě. Nejprve Linux, teď Git."*
+
+Linus Torvalds zvolil název spíše jako recesi než jako odborný termín. Podobný technický humor je v unixovém světě běžný. Také názvy GNU, Bash, Apache, less, nano, pico, zombie, daemon, kill a řada dalších vznikly jako slovní hříčky.
+
+To je mimochodem důvod, proč většina učebnic vznik názvu raději vůbec neřeší 😄.
+

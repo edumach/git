@@ -9,6 +9,8 @@ git init
 
 ⚠️ "repozitář" = "projekt" = "adresář" (složka)
 
+Repozitář je složka, ve které Git sleduje historii souborů.
+
 Nový projekt:
 
 ```bash
