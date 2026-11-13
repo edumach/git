@@ -161,7 +161,7 @@ $ git push
 Test připojení:
 
 ```bash
-ssh -T $ git@$ gitlab.panska.cz
+ssh -T $ git@gitlab.panska.cz
 ```
 
 ---
