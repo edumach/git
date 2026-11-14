@@ -72,4 +72,39 @@ U příkazu `git add` doporučuji přepínač `-A` (nebo `--all`, což je to sam
 
 Naopak `git add .` přidá nové, změněné i smazané soubory **jen od aktuální složky dolů**. 
  
+**Praktický příklad:**
 
+Opravíte soubory:
+
+```
+index.html
+css/style.css
+```
+
+Potom se přepnete do:
+
+```bash
+$ cd css
+```
+a zadáte:
+
+```bash
+$ git add .
+$ git commit -m "Úprava webu"
+```
+
+Výsledek:
+
+- `css/style.css` se do commitu přidá 
+- `index.html` se do commitu **nepřidá**
+
+Commit tedy neobsahuje všechny změny.
+
+Když místo toho použijete:
+
+```bash
+$ git add -A
+$ git commit -m "Úprava webu"
+```
+
+uloží se vše.
