@@ -65,3 +65,11 @@ git commit -m "Popis změn"
 ```
 
 Zapamatovat si: upravím → add → commit
+
+---
+
+U příkazu `git add` doporučuji přepínač `-A` (nebo `--all`, což je to samé). Přidá **všechny změny v celém repozitáři bez ohledu na aktuální složku**. To znamená méně překvapení a méně dotazů typu: "Proč se mi ten soubor neuložil do commitu?"
+
+Naopak `git add .` přidá nové, změněné i smazané soubory **jen od aktuální složky dolů**. 
+ 
+
