@@ -1,11 +1,12 @@
 
-# Git: cvičení HTML 1 (TuX)
+# Git/GitLab: cvičení WEB 1
 
 > max 30 minut
 
 **⚙️ Příprava** 
+
 - Přihlaste se na server Tux. 
-- Vytvořte adresář `~/www/git_html1`.
+- Vytvořte adresář `~/www/web1`.
 - Přesuňte se do něj.
 - Další činnosti provádějte v tomto adresáři.
 
@@ -91,10 +92,11 @@ Jméno Příjmení
 
 ---
 
-**Dokončení** 
+**(7)** Odeslání repozitáře na GitLab
 
-- Pro kontrolu si vypište log commitů. 
-- Výsledek si zkontroluji přímo na serveru TuX. Nikam nic neposílejte. 
+Repozitář napojte na váš školní GitLab a odešlete jej.
+
+Jeho viditelnost nastavte na **Internal**. 
 
 
 

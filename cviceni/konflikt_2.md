@@ -1,15 +1,23 @@
 
-# Git cvičení – konflikt ve webové stránce
+# Git/GitLab cvičení – konflikt ve webové stránce
 
 > max 30 minut
 
 ---
 
-Ve svém home adresáři na serveru TuX založte Git repozitář `konflikt2`
+- Přihlaste se na server TuX. 
+- Vytvořte adresář `~/www/konflikt2`.
+- Přesuňte se do něj.
+- Další činnosti provádějte v tomto adresáři.
 
 ---
 
-(1) Vytvoření souborů
+Vytvořte z něho Git repozitář.
+
+---
+
+
+**(1)** Vytvoření souborů
 
 Vytvořte soubory `index.html` a `styly.css`:
 
@@ -135,8 +143,6 @@ Otevřete konfliktní soubory a upravte je například takto:
 
 ---
 
-**Dokončení**
-
 * Zkontrolujte historii:
 
     ```bash
@@ -145,3 +151,12 @@ Otevřete konfliktní soubory a upravte je například takto:
 
 * Výsledek zůstává na serveru TuX.
 
+---
+
+**(7)** Odeslání repozitáře na GitLab
+
+Repozitář napojte na váš školní GitLab a odešlete na něj větev `master`. 
+
+Jeho viditelnost nastavte na **Internal**. 
+
+---

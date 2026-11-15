@@ -1,7 +1,7 @@
 
-# Git cvičení – text s konfliktem
+# Git/GitLab cvičení – text s konfliktem
 
-> max 30 minut
+> max 35 minut
 
 ---
 
@@ -77,9 +77,10 @@ $ git commit ...
 ```
 ---
 
-**Dokončení** 
+**7. Odeslání repozitáře na GitLab**
 
-- Pro kontrolu si vypište log commitů. 
-- Výsledek si zkontroluji přímo na serveru TuX. Nikam nic neposílejte.
+Repozitář napojte na váš školní GitLab a odešlete na něj větev `master`. 
 
+Jeho viditelnost nastavte na **Internal**. 
 
+---

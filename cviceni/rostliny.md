@@ -1,11 +1,11 @@
 
-# Git: cvičení (rostliny)
+# Git/GitLab: cvičení (rostliny)
 
-> max 30 minut
+> max 35 minut
 
 ---
 
-Vytvořte složku `prijmeni-rostliny` a v něm založte git repozitář. Další činnosti provádějte v této složce.
+Na serveru TuX vytvořte adresář `~/rostliny`. V něm založte git repozitář. Další činnosti provádějte v tomto adresáři.
 
 ---
 
@@ -91,7 +91,13 @@ Autor: Jméno Příjmení
 
 ---
 
-**Odevzdání:**
+**7. Odeslání repozitáře na GitLab:**
 
-Odevzdejte podle pokynů vyučujícího.
+Repozitář napojte na váš školní GitLab a odešlete jej.
+
+Jeho viditelnost nastavte na **Internal**. 
+
+
+---
+
 
