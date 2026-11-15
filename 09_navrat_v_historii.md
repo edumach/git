@@ -7,7 +7,7 @@ git reset
 git reflog
 ```
 
-Git nám umožňuje "cestovat časem" v našem kódu, což je jedna z jeho největších výhod. Díky tomu se můžeme kdykoliv vrátit k předchozím verzím projektu, ať už chceme opravit chybu, dokonce obnovit i smazaný soubor nebo jednoduše prozkoumat, jak se projekt vyvíjel. Je to jako mít archiv všech verzí našeho kódu, kdykoliv po ruce. 
+Git nám umožňuje "cestovat časem" v našem kódu, což je jedna z jeho největších výhod. Díky tomu se můžeme kdykoliv vrátit k předchozím verzím projektu, ať už chceme opravit chybu, dokonce obnovit i smazaný soubor nebo jednoduše prozkoumat, jak se projekt vyvíjel. Je to jako mít archiv všech verzí našeho kódu, kdykoliv po ruce.
 
 Git vytváří **zálohy všech verzí**, takže se nemusíme bát o ztrátu dat.
 

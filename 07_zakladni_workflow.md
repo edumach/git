@@ -108,3 +108,61 @@ $ git commit -m "Úprava webu"
 ```
 
 uloží se vše.
+
+---
+
+## Výpis historie commitů
+
+Historii projektu zobrazíte příkazem:
+
+```bash
+git log
+```
+
+Git vypíše všechny commity od nejnovějšího po nejstarší. U každého commitu zobrazí:
+
+- commit hash,
+- autora,
+- datum a čas vytvoření,
+- zprávu commitu.
+
+Příklad:
+
+```text
+commit e566ffcc3007ce7f9bf76217a8f963c78095d30e
+Author: Jiří Machač <machac@panska.cz>
+Date:   Tue Dec 13 15:06:04 2024 +0100
+
+    Přidaný titulek webu
+```
+
+Výpis může být delší. Pro pohyb použijte šipky na klávesnici. Pro ukončení stiskněte klávesu `Q` (*Quit*).
+
+
+### Zkrácená historie
+
+Pro běžnou práci bývá praktičtější jednořádkový výpis:
+
+```bash
+git log --oneline
+```
+
+Příklad:
+
+```text
+e566ffc (HEAD -> main) Přidaný titulek webu
+d5777d1 Vytvoření externího CSS
+e20ee59 Lokalizace webu do CZ
+d747969 První verze webu
+```
+
+Význam jednotlivých částí:
+
+- `e566ffc` - zkrácený commit hash,
+- `HEAD` - aktuální commit,
+- `main` - aktivní větev,
+- `Přidaný titulek webu` - zpráva commitu.
+
+Příkaz `git log --oneline` poskytuje rychlý přehled historie projektu a patří mezi nejčastěji používané gitové příkazy.
+
+
