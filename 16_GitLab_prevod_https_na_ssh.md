@@ -8,7 +8,13 @@ Pokud byl repozitář naklonován přes HTTPS, ale chceme používat SSH autenti
    git remote -v
    ```
 
-2. Změníme adresu `origin` na SSH:
+   Výsledek bude například:
+   ```text
+   origin https://gitlab.panska.cz/10XPrijmeniJ/repozitar.git (fetch)
+   origin https://gitlab.panska.cz/10XPrijmeniJ/repozitar.git (push)
+   ```
+
+2. **Změníme adresu `origin` na SSH**:
    ```bash
    git remote set-url origin git@gitlab.panska.cz:10XPrijmeniJ/repozitar.git
    ```
