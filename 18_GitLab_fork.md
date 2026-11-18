@@ -13,6 +13,8 @@ U veřejných repozitářů navíc klonování nevyžaduje ani přihlášení u�
   
 Fork je proces, při kterém si na svém účtu vytvoříte **vlastní vzdálenou kopii** cizího repozitáře. Tato kopie se nachází na stejném serveru jako původní projekt a je s ním logicky provázaná. Z tohoto důvodu lze fork provádět pouze v rámci jednoho serveru, například `gitlab.panska.cz`, `gitlab.com` nebo `github.com`.
 
+![img/fork.png](img/fork.png)
+
 Forkovaný repozitář je plnohodnotný projekt, do kterého můžete odesílat vlastní změny. Tyto změny lze později **nabídnout autorovi původního repozitáře**, typicky pomocí **merge requestu**.
 
 Další podmínkou forku je **viditelnost projektu**. V našem školním prostředí jsou projekty označeny jako **Public** nebo **Internal**, což forkování umožňuje.
@@ -27,6 +29,8 @@ Další podmínkou forku je **viditelnost projektu**. V našem školním prostř
 ## Fork projektu
 
 V této části si fork vyzkoušíme v praxi na jednoduchém cvičném projektu.
+
+![img/fork.png](img/fork2.png)
 
 Přihlaste se do školního GitLabu a otevřete adresu
 [https://gitlab.panska.cz/machac/git-fork](https://gitlab.panska.cz/machac/git-fork).
