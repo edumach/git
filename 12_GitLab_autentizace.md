@@ -10,18 +10,18 @@ Na počítači si vygenerujte **pár šifrovacích klíčů** (dva textové soub
 Vygenerování klíče:
 
 ```bash
-$ ssh-keygen -t ed25519 -C "10XPrijmeniJ@student.panska.cz"
+ssh-keygen -t ed25519 -C "10XPrijmeniJ@student.panska.cz"
 ```
 Všechny otázky potvrďte klávesou **Enter**, heslo ke klíči nevytvářejte.
 
-Výchozí umístění:
+**Výchozí umístění:**
 
 ```
 ~/.ssh/id_ed25519
 ~/.ssh/id_ed25519.pub
 ```
 
-Zobrazení veřejného klíče:
+**Zobrazení veřejného klíče:**
 
 Linux/macOS (v terminálu):
 ```
@@ -32,20 +32,20 @@ Windows (v PowerShellu):
 type ~/.ssh/id_ed25519.pub
 ```
 
-Přidání klíče do GitLabu:
+**Přidání klíče do GitLabu:**
 
 1. GitLab: **Profile** → **Preferences** → **SSH Keys**
 2. Vložit obsah souboru `id_ed25519.pub`
 3. Do pole **Title** je dobrí zapsat název počítače/učebny
 4. Kliknout na **Add Key**
 
-Test spojení:
+**Test spojení:**
 
 ```bash
 ssh -T git@gitlab.panska.cz
 ```
 
-První spuštění na daném počítači může vyvolat potřebu klíč verifikovat:
+První spuštění na daném počítači vyvolá potřebu **klíč verifikovat**:
 
 ```
 $ ssh -T git@gitlab.panska.cz
