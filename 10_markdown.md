@@ -3,9 +3,13 @@
 
 <img src="img/markdown-logo.png" width="100">
 
-Markdown je jednoduchý značkovací jazyk pro formátování prostého textu. V Gitu se používá hlavně v souboru `README.md`, který slouží jako dokumentace projektu. Na GitLabu či GitHubu se automaticky zobrazuje na hlavní stránce repozitáře. Umožňuje snadno vytvářet nadpisy, seznamy, odkazy, tabulky nebo části kódů. 
+Markdown je jednoduchý značkovací jazyk pro formátování prostého textu. V Gitu se používá hlavně v souboru `README.md`, který slouží jako **dokumentace projektu**. Dle zvyklostí se jeho název píše velkými písmeny.
+
+Na GitLabu či GitHubu se automaticky zobrazuje na hlavní stránce repozitáře. Umožňuje snadno vytvářet nadpisy, seznamy, odkazy, tabulky nebo části kódů. 
 
 Přípona markdown souboru je `.md`.
+
+🌐 Cheat Sheet: [https://markdowncheatsheet.com/reference](https://markdowncheatsheet.com/reference)
 
 Ukázka:
 
@@ -47,4 +51,3 @@ int main(void)
 ‘‘‘
 ```
 
-Cheat Sheet: [https://markdowncheatsheet.com/reference](https://markdowncheatsheet.com/reference)
