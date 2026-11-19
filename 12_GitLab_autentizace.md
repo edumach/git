@@ -23,8 +23,14 @@ Výchozí umístění:
 
 Zobrazení veřejného klíče:
 
-- Linux/macOS: `cat ~/.ssh/id_ed25519.pub`
-- Windows: `type %USERPROFILE%\.ssh\id_ed25519.pub`
+Linux/macOS (v terminálu):
+```
+cat ~/.ssh/id_ed25519.pub
+```
+Windows (v PowerShellu):
+```
+type ~/.ssh/id_ed25519.pub
+```
 
 Přidání klíče do GitLabu:
 
