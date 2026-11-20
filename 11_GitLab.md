@@ -22,7 +22,7 @@ Pro výukové účely ve škole používáme vlastní server s platformou **GitL
 
 ## Vytvoření účtu
 
-<img src="img/gitlab-register.png" width="600">
+<img src="img/gitlab-register.png" width="500">
 
 
 1. Otevřít: [https://gitlab.panska.cz](https://gitlab.panska.cz)
