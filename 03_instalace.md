@@ -3,7 +3,7 @@
 
 ## Kontrola instalace
 
-Pokud se zobrazí číslo verze, je Git nainstalovaný a připraven k použití.
+Možná už na počítači Git máte. Pokud se zobrazí číslo verze, je Git nainstalovaný a připraven k použití.
 
 ```bash
 git --version
