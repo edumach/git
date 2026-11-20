@@ -13,7 +13,7 @@ U veřejných repozitářů navíc klonování nevyžaduje ani přihlášení u�
   
 Fork je proces, při kterém si na svém účtu vytvoříte **vlastní vzdálenou kopii** cizího repozitáře. Tato kopie se nachází na stejném serveru jako původní projekt a je s ním logicky provázaná. Z tohoto důvodu lze fork provádět pouze v rámci jednoho serveru, například `gitlab.panska.cz`, `gitlab.com` nebo `github.com`.
 
-<img src="img/fork.png" width="500">
+<img src="img/fork.png" width="600">
 
 Forkovaný repozitář je plnohodnotný projekt, do kterého můžete odesílat vlastní změny. Tyto změny lze později **nabídnout autorovi původního repozitáře**, typicky pomocí **merge requestu**.
 
