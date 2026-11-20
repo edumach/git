@@ -1,7 +1,7 @@
 
 # Průběžná synchronizace
 
-Tato činnost vyžaduje jistou míru systemtičnosti. Před odesláním změn je **vždy doporučeno nejprve zjistit stav vzdáleného repozitáře**. Předcházíte tím pozdějším konfliktům.
+Tato činnost vyžaduje **dodržovat zavedený postup**. Před odesláním změn je **vždy doporučeno nejprve zjistit stav vzdáleného repozitáře**. Předcházíte tím pozdějším konfliktům.
 
 Jako vždy se vše provádí uvnitř repozitáře:
 
@@ -9,11 +9,14 @@ Jako vždy se vše provádí uvnitř repozitáře:
 cd nazev_repozitare
 ```
 
-Nejprve si stáhněte informace o změnách ze serveru. Příkaz nic neslučuje ani nemění v pracovních souborech:
+Nejprve si stáhněte informace o změnách ze serveru. **Příkaz nic neslučuje ani nemění v pracovních souborech**:
 
 ```bash
 git fetch
 ```
+
+Pokud příkaz nic nevypíše, žádné změny ve vzdálením repozitáři nejsou. Pokud ano, příkaz vypíše jaké. 
+
 
 Může nastat jeden ze dvou stavů:
 
