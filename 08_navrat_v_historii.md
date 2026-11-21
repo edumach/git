@@ -62,3 +62,4 @@ zjistěte hash posledního (nejnovějšího) commitu a vraťte se:
 ```bash
 $ git reset --hard f0d19fb
 ```
+

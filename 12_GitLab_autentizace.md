@@ -1,13 +1,25 @@
 
 # Propojení s počítačem (SSH klíče)
 
-Pro plnohodnotnou spolupráci mezi lokálním Git repozitářem a GitLab serverem je potřeba si nejprve vygenerovat šifrovací klíče.
+Pro plnohodnotnou spolupráci mezi lokálním Git repozitářem a GitLab serverem je potřeba si nejprve vygenerovat šifrovací klíče - **soukromý** a **veřejný**. 
+
+- soukromý umí text zašifrovat i rozšifrovat
+- veřejný pouze zašifrovat
+
+Jak to funguje (zjednodušeně):
+
+1. Klient pošle požadavek na ověření.
+2. Server vygeneruje jednorázový náhodný řetězec znaků (např. `7F9A2C81...`), **zašifruje ho veřejným klíčem** a pošle klientovi.
+3. Klient zprávu **soukromým klíčem rozšifruje** a odešle zpět na server. 
+4. Server oba řetězce porovná, a pokud souhlasí, je identita ověřena.
+
+---
 
 ⚠️ Pro správnou funkčnost **musí být e-mail lokálního Git repozitáře stejný s GitLabem** - tedy váš školní. Před pokračováním zkontrolujte, popř. nastavte školní. Jinak nebude propojení na GitLab fungovat! Tento požadavek platí i pro GitHub.
 
 Na počítači si vygenerujte **pár šifrovacích klíčů** (dva textové soubory). Jeden je **privátní** - zůstává uložený v počítači, druhý je **veřejný**. Ten se nakopíruje na server. GitLab podporuje [několik typů klíčů](https://docs.gitlab.com/18.6/user/ssh/). My použijeme preferovaný typ **ED25519**. Používá jej i GitHub.
 
-Vygenerování klíče:
+Vygenerování klíčů:
 
 ```bash
 ssh-keygen -t ed25519 -C "10XPrijmeniJ@student.panska.cz"
@@ -20,6 +32,11 @@ Všechny otázky potvrďte klávesou **Enter**, heslo ke klíči nevytvářejte.
 ~/.ssh/id_ed25519
 ~/.ssh/id_ed25519.pub
 ```
+
+Soukromý klíč má po vygenerování automaticky nastavená práva pouze pro majitele (`600`, `-rw-------`). Nikdo jiný se k němu nedostane:
+
+
+<img src="img/ssh.png" width="230">
 
 **Zobrazení veřejného klíče:**
 

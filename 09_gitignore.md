@@ -9,9 +9,12 @@ Soubor `.gitignore` určuje, které soubory Git **nebude sledovat**. Typické po
 - nastavení editorů,
 - velké automaticky generované adresáře.
 
-Příklad souboru:
 
-```
+
+```sh
+# Příklad souboru
+# ---------------
+
 # Ignoruje soubor 
 poznamky.txt
 

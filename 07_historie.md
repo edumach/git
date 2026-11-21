@@ -11,7 +11,7 @@ Příkaz:
 $ git show
 ```
 
-Příkaz zobrazí informace o commitu a také změny, které commit provedl oproti **předchzí verzi** projektu.
+Příkaz zobrazí informace o commitu a také změny, které commit provedl oproti **předchozí verzi** projektu.
 
 Ukázka:
 
@@ -68,7 +68,7 @@ Git ukazuje, že starý řádek byl nahrazen novým.
 
 ### Nezměněné řádky
 
-Řádky bez speciálního znaku slouží pouze jako kontext:
+Řádky bez speciálního znaku slouží pouze jako kontext (k snazšímu nalezení v souboru):
 
 ```html
 <!DOCTYPE html>
@@ -88,17 +88,17 @@ Tento řádek bývá pro začátečníky matoucí:
 
 Udává, ve které části souboru se změna nachází.
 
-```text
+```diff
 -1,6
 ```
 
-Ve staré verzi se zobrazí 6 řádků od řádku 1.
+Ve staré verzi (`-`) se zobrazí 6 řádků od řádku 1.
 
-```text
+```diff
 +1,7
 ```
 
-V nové verzi se zobrazí 7 řádků od řádku 1.
+V nové verzi (`+`) se zobrazí 7 řádků od řádku 1.
 
 Protože byl přidán jeden nový řádek (`<title>`), zvýšil se počet řádků z 6 na 7.
 
@@ -145,11 +145,11 @@ Git vypíše:
 - seznam změněných souborů,
 - přidané a odstraněné řádky.
 
-To je často nejrychlejší způsob, jak zjistit:
+To je nejrychlejší způsob, jak zjistit:
 
-- kdo změnu provedl,
-- kdy ji provedl,
-- proč ji provedl,
+- kdo změnu provedl (jméno a e-mail),
+- kdy ji provedl (časové razítko),
+- proč ji provedl (komentář),
 - které části projektu upravil.
 
 

@@ -5,7 +5,7 @@
 Vše se provádí uvnitř repozitáře:
 
 ```bash
-cd test
+cd nazev
 ```
 
 Než lokální repozitář propojíte s GitLabem, je dobré si ověřit, zda už k nějakému vzdálenému repozitáři připojený není.
@@ -23,10 +23,10 @@ Další kroky se odvíjí podle toho, zda odesíláte váš vlastní Git repozit
 ---
 
 
-## Varianta 1: Vlastní lokální repozitář
+## Varianta A: Vlastní lokální repozitář
 
 
-(1) Přidání vzdáleného repozitáře:
+**(1)** Přidání vzdáleného repozitáře:
 
 ```bash
 $ git remote add origin git@gitlab.panska.cz:10XPrijmeniJ/test.git
@@ -42,7 +42,7 @@ $ git remote add origin git@gitlab.panska.cz:10XPrijmeniJ/test.git
 $ git remote -v
 ```
 
-(2) Kontrola stavu lokálního repozitáře před odesláním. **Musí vypsat `working tree clean`**. JInak nepůjde repozitář odeslat.
+**(2)** Kontrola stavu lokálního repozitáře před odesláním. **Musí vypsat `working tree clean`**. JInak nepůjde repozitář odeslat.
 
 ```bash
 $ git status
@@ -52,20 +52,20 @@ Your branch is up to date with 'origin/main'.
 nothing to commit, working tree clean
 ```
 
-(3) První odeslání. Parametr `-u` nastaví výchozí vzdálenou větev:
+**(3)** První odeslání. Parametr `-u` nastaví výchozí vzdálenou větev:
 
 ```bash
 git push -u origin main
 ```
 
 
-(4) Další odeslání. Větev musí být vždy "čistá" (viz bod 2):
+**(4)** Další odeslání. Větev musí být vždy "čistá" (viz bod **2**):
 
 ```bash
 git push
 ```
 
-## Varianta 2: Repozitář klonovaný odjinud
+## Varianta B: Repozitář klonovaný odjinud
 
 Tato situace nastává tehdy, pokud jste repozitář nejprve stáhli pomocí `git clone` (např. z GitHubu nebo z cizího GitLabu) a chcete jej následně nahrát do vlastního repozitáře na GitLabu.
 
@@ -93,9 +93,7 @@ Tím dojde pouze ke změně cílového vzdáleného repozitáře. Veškerá hist
 
 # ⚠️ Rozdíl při prvním odeslání repozitáře na GitHub
 
-Při odesílání lokálního repozitáře na GitHub je postup téměř stejný jako u školního GitLabu. **Hlavní rozdíl je v tom, že na GitHubu musíte vzdálený repozitář nejprve vytvořit prostřednictvím webového rozhraní.**
-
-Samotný příkaz `git push` nový repozitář na GitHubu nevytvoří.
+Při odesílání lokálního repozitáře na GitHub je postup téměř stejný jako u školního GitLabu. Hlavní rozdíl je v tom, že na GitHubu musíte vzdálený repozitář nejprve vytvořit prostřednictvím webového rozhraní Samotný příkaz `git push` nový repozitář na GitHubu nevytvoří.
 
 ## Postup
 
@@ -136,15 +134,10 @@ Parametr `-u` nastaví výchozí vzdálenou větev. Při dalších odesíláníc
 ```bash
 $ git push
 ```
+---
 
-## Shrnutí rozdílu mezi GitLabem a GitHubem
+## Shrnutí
 
-| Operace | Školní GitLab | GitHub |
-|---|---|---|
-| Vytvoření vzdáleného repozitáře | Může vzniknout automaticky při prvním `push` | Nejprve ručně přes web |
-| Připojení pomocí `git remote add` | Ano | Ano |
-| První odeslání `git push -u` | Ano | Ano |
-| Další odesílání `git push` | Ano | Ano |
+U našeho školního GitLabu lze vytvořit vzdálený repozitář prvním odesláním. GitHub vyžaduje, abyste vzdálený repozitář nejprve založili.
 
-**Zapamatujte si:** U našeho školního GitLabu lze vytvořit vzdálený projekt prvním odesláním. GitHub vyžaduje, abyste vzdálený repozitář nejprve založili.
 

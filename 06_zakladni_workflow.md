@@ -10,7 +10,7 @@ git log
 
 ---
 
-Všchny činnosti se provádějí **vždy v adresáři s repozitářem**!!!
+Všechny činnosti se provádějí **vždy v adresáři s repozitářem**!!!
 
 ```bash
 cd nazev_repozitae
@@ -64,7 +64,9 @@ git add -A
 git commit -m "Popis změn"
 ```
 
-Zapamatovat si: upravím → add → commit
+Zapamatovat si: **upravím → add → commit** a tak stále dokola.
+
+**Poznámka:** V reálném projektu vytvářet commity **po dokončení nějaké ucelené změny** a ne po každém napsaném řádku. Nebo si jednoduše nastavíte jiná nějaká rozumná "pravidla hry". Např. 2&times; denně, večer, jednou za hodinu... Důležitý je hlavně smysluplný komentář.
 
 ---
 
